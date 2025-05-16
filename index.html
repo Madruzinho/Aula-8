@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <style>
+         html, body {
+      height: 100%; /* Garante que o gradiente ocupe toda a altura */
+      margin: 0;     /* Remove margem padrão */
+    }
+        body {
+            background: linear-gradient(to bottom, #ffffff 20%, #0c99bd 80%);
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+        }
+
+        .botao_reset {
+            background-color: rgb(255, 106, 106);
+        }
+    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -8,15 +22,43 @@
 <body>
     <form
         action="#"
-        method="get"
-        target="_blank">
+        method="post"
+        target="_blank"
+        onsubmit="alert('Formulario Enviado!!');">
         <label>Nome: </label>
-        <input type="text" />
-    </br>
+        <input type="text" name="Nome" / required>
+</br>
         <label>Senha: </label>
-        <input type="password" />
+        <input type="password" / required>
+</br>
+        <label>Numero: </label>
+        <input type="number" max="5" / required>
+</br>
+        <label>Email: </label>
+        <input type="email" name="Email" / required>
+</br>
+        <label>Data:</label>
+        <input type="date" name="Data" / required>
+</br>
+        <input type="checkbox" name="opcao" /><label>Futebol</label> </br>
+        <input type="checkbox" name="opcao" /><label>Volei</label> </br>
+        <input type="checkbox" name="opcao" /><label>Basquete</label>
+</br>
+        <input type="radio" name="time" /><label>Corinthias</label> </br>
+        <input type="radio" name="time" /><label>Flamengo</label> </br>
+        <input type="radio" name="time" /><label>Cruzeiro</label>
+</br>
+        <select id="estado" name="estado">
+            <option value="mg">Minas Gerais</option>
+            <option value="sp">São Paulo</option>
+            <option value="rm">Roraima</option>
+        </select>
+</br></br>
+        <textarea name="Obs" placeholder="Faça uma sugestao"></textarea>
 </br>
         <button type="submit"> enviar </button>
+        <button class="botao_reset" type="reset" > Limpar </button>
+        <button type="button" onclick="alert" oi> Suprezinha </button>
     </form>
     
 </body>
